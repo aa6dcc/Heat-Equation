@@ -104,7 +104,7 @@ This equation is a general statement regarding the conservation of thermal energ
             <li><code>q(x, t)</code>: Heat flux (thermal energy per unit time)</li>
             <li><code>k</code>: Thermal conductivity</li>
             <li><code>u(x, t)</code>: Temperature</li>
-            <li><code>\(Delta x)</code>: Small spatial increment</li>
+            <li><code>Δx</code>: Small spatial increment</li>
         </ul>
     </p>
 </body>
