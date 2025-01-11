@@ -83,11 +83,19 @@ x, t, u = solve_heat_equation(L=L, T=T, alpha=alpha, nx=nx, nt=nt, boundary_cond
 
 verify_maximum_principle(u, x, t)
 
+# Plot the solution with Maximum Principle bounds
 plt.figure(figsize=(8, 6))
 for n in range(0, nt, max(1, nt // 5)):
     plt.plot(x, u[n, :], label=f"t = {t[n]:.2f}")
 
-plt.title("Heat Equation Solution")
+max_initial = np.max(u[0, :])
+max_boundary = max(0, 0) 
+max_allowed = max(max_initial, max_boundary)
+
+plt.axhline(max_initial, color='red', linestyle='--', label=f"Max Initial = {max_initial:.2f}")
+plt.axhline(max_boundary, color='green', linestyle='--', label=f"Max Boundary = {max_boundary:.2f}")
+
+plt.title("Heat Equation Solution with Maximum Principle Bounds")
 plt.xlabel("x")
 plt.ylabel("u(x, t)")
 plt.legend()
