@@ -148,7 +148,7 @@ When we combine the information above, we get:
             <li><code>u(x, t)</code>: Temperature</li>
             <li><code>k</code>: Thermal conductivity</li>
             <li><code>Q</code>: Heat source</li>
-            <li><code>\(\alpha^2 = \frac{k}{c \rho}\)</code>: Thermal diffusivity</li>
+            <li><code>α^2 = k/(c*ρ)</code>: Thermal diffusivity</li>
         </ul>
     </p>
 </body>
