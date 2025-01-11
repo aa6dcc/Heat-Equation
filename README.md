@@ -28,13 +28,16 @@ It was first developed by French mathematician and physicist Joseph Fourier in 1
 | Summary   |
 |-----------|
 | [Introduction](#Introduction) |
-| [General solution to the 1-D wave equation: d'Alembert's approach](#General-solution-to-the-1-d-wave-equation-dalemberts-approach) |
 | [Newton-Raphson estimation method](#Newton-Raphson-estimation-method) |
 | [Finding solution bounds](#Finding-solution-bounds) |
-| [Generalizing the solution technique for higher orders](#Generalizing-the-solution-for-higher-orders) |
+| [Deriving the heat equation in 1D](#Deriving-the-heat-equation-in-1-D)|
+| [Generalizing the solution technique](#Generalizing-the-solution-technique) |
 | [Computational methods](#Computational-methods) |
 | [Optimization](#Optimization) |
 
+## Introduction
+
+As mentioned above, the heat equation is a partial differential equation which arises in problems of heat conduction.
 
 At steady state, the heat equation simplifies down to Laplace's equation, a second order partial differential equation:
 
@@ -47,3 +50,54 @@ Where:
 - `∇²`: Laplace operator, defined as `∂²/∂x² + ∂²/∂y²` in 2D or `∂²/∂x² + ∂²/∂y² + ∂²/∂z²` in 3D
 
 In effect, the heat equation can be thought of as an extension of Laplace's equation to include the effect of time-dependent heat flow. 
+
+## Newton-Raphson estimation method
+
+## Finding solution bounds
+
+## Deriving the heat equation in 1D
+
+Consider the temperature distribution u(x,t) in a thin metal rod of length L. 
+
+![image](https://github.com/user-attachments/assets/1f24faf7-305e-40d1-85f6-eb92d40e4cb2)
+
+The rate of change of heat energy in time is the sum of the heat flux through the boundary to its neighbours and the heat energy generated at any point in space/time. 
+
+<p>The rate of change of heat energy in time is given by:</p>
+<p>
+    <math xmlns="http://www.w3.org/1998/Math/MathML">
+        <mfrac>
+            <mrow>
+                <mi>d</mi>
+                <mi>Q</mi>
+            </mrow>
+            <mrow>
+                <mi>d</mi>
+                <mi>t</mi>
+            </mrow>
+        </mfrac>
+        <mo>=</mo>
+        <mo>&#8747;</mo>
+        <mi>&#8706;</mi>
+        <mi>q</mi>
+        <mo>/</mo>
+        <mi>&#8706;x</mi>
+        <mo>+</mo>
+        <mi>Q</mi>
+        <mo>&#40;</mo>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>t</mi>
+        <mo>&#41;</mo>
+    </math>
+</p>
+
+This equation is a general statement regarding the conservation of thermal energy. 
+
+## Generalizing the solution technique
+
+## Computational methods
+
+## Optimization
+
+
