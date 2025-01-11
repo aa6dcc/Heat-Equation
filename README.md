@@ -61,6 +61,8 @@ Before directly solving the heat equation, one could also choose to estimate its
 There are several estimation methods for this, but these only deal with linear systems. 
 As the heat equation is a linear PDE, we have to restrict the estimation methods to linear ones (ie. not the Newton-Raphson method for example). 
 
+Please find the Python code used for estimations here: [https://github.com/aa6dcc/Heat-Equation/blob/main/estimation-methods/Estimation_methods.ipynb](#reference)
+
 ### Fourier series
 
 A Fourier series is an expansion of a periodic function into an infinite sum of trigonometric functions.
