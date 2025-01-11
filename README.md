@@ -25,6 +25,16 @@ Where:
 
 It was first developed by French mathematician and physicist Joseph Fourier in 1822 for modelling how a quantity such as heat diffuses in a given region, but many great minds (such as Joule, Carnot, Kelvin... or even Benjamin Thompson, who measured heat produced during the process of boring a cannon) had worked on the concept of heat diffusion, from the Ancient Greeks to modern scientists. 
 
+| Summary   |
+|-----------|
+| Introduction |
+| General solution to the 1-D wave equation: d'Alembert's approach |
+| Newton-Raphson estimation method |
+| Finding solution bounds |
+| Generalizing the solution technique for higher orders |
+| Computational methods |
+| Optimization |
+
 
 At steady state, the heat equation simplifies down to Laplace's equation, a second order partial differential equation:
 
@@ -35,3 +45,5 @@ At steady state, the heat equation simplifies down to Laplace's equation, a seco
 Where:
 - `u`: Scalar potential function (e.g., temperature, electric potential, etc.)
 - `∇²`: Laplace operator, defined as `∂²/∂x² + ∂²/∂y²` in 2D or `∂²/∂x² + ∂²/∂y² + ∂²/∂z²` in 3D
+
+In effect, the heat equation can be thought of as an extension of Laplace's equation to include the effect of time-dependent heat flow. 
