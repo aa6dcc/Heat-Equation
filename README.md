@@ -4,15 +4,11 @@ The heat equation is a partial differential equation.
 
 It is most commonly seen under its standard form in one dimension:
 
-\[
-\frac{\partial u}{\partial t} = \alpha \frac{\partial^2 u}{\partial x^2}
-\]
+![Heat Equation](https://latex.codecogs.com/svg.latex?\frac{\partial%20u}{\partial%20t}%20=%20\alpha%20\frac{\partial^2%20u}{\partial%20x^2})
 
 But it in higher dimensions it can be expressed as:
 
-\[
-\frac{\partial u}{\partial t} = \alpha \nabla^2 u
-\]
+![Heat Equation](https://latex.codecogs.com/svg.latex?\frac{\partial%20u}{\partial%20t}%20=%20\alpha%20\nabla^2%20u)
 
 Where:
 - \( u(x, t) \): Temperature at position \( x \) and time \( t \)
