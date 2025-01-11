@@ -249,12 +249,13 @@ The heat equation satisfies the maximum principle, which states:
 
 ### Bounding Using Initial and Boundary Conditions
 
-    <li>If the initial condition f(x) is known, then u(x,t) is bounded by the maximum and minimum values of f(x)</li>
+If the initial condition f(x) is known, then u(x,t) is bounded by the maximum and minimum values of f(x):
     <li>For Dirichlet boundary conditions (u(0,t)=u(L,t)=0), u(x,t) remains non-negative if f(x)≥0</li>
     <li>For Neumann boundary conditions (∂u/∂x=0 at boundaries), u(x,t) may preserve symmetry or maintain constant total heat</li>
 
 ### Energy methods
 
+We can also use the energy of the signal:
     <li>The energy (integral of u^2*(x,t)) of the solution decreases over time due to diffusion</li>
     <li>The norm ∥u∥∞ decreases monotonically, providing a practical way to estimate bounds as heat diffuses</li>
     
