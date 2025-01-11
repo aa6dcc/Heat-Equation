@@ -1,6 +1,7 @@
 # Solving the heat equation
 
 The heat equation is a partial differential equation.
+It tells us that the rate at which the temperature changes at a given point over time depends on the second derivative of that temperature at that point with respect to space. 
 
 It is most commonly seen under its standard form in one dimension:
 
@@ -24,6 +25,8 @@ Where:
 - `∇²`: Laplace operator
 
 It was first developed by French mathematician and physicist Joseph Fourier in 1822 for modelling how a quantity such as heat diffuses in a given region, but many great minds (such as Joule, Carnot, Kelvin... or even Benjamin Thompson, who measured heat produced during the process of boring a cannon) had worked on the concept of heat diffusion, from the Ancient Greeks to modern scientists. 
+
+The heat equation doesn't fully describe the behaviour of heat, as we also need initial conditions and boundary conditions to fully analyze it. 
 
 | Summary   |
 |-----------|
