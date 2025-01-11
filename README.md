@@ -31,6 +31,8 @@ It was first developed by French mathematician and physicist Joseph Fourier in 1
 | [Newton-Raphson estimation method](#Newton-Raphson-estimation-method) |
 | [Finding solution bounds](#Finding-solution-bounds) |
 | [Deriving the heat equation in 1D](#Deriving-the-heat-equation-in-1-D)|
+    [Heat flux](#Heat-flux)
+    [Fourier's law of heat conduction](#Fourier-law-heat-conduction)
 | [Generalizing the solution technique](#Generalizing-the-solution-technique) |
 | [Computational methods](#Computational-methods) |
 | [Optimization](#Optimization) |
