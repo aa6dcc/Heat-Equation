@@ -128,6 +128,61 @@ The Laplace transform is an integral transform that converts a variable in the t
 
 A Green function is the impulse response of linear inhomogeneous PDE differential operators. It's a mathematical tool which describes how a cause an initial time affects an effect at a later time. 
 
+<h4 style="color:darkblue;">Green's Function Approach for the Heat Equation</h4>
+
+<p>The Green's function method provides a powerful way to solve the 1D heat equation:</p>
+
+<pre>
+∂u(x, t)/∂t = α ∂²u(x, t)/∂x²,
+</pre>
+
+<p>with arbitrary initial conditions and Dirichlet boundary conditions.</p>
+
+<h5>Key Ideas:</h5>
+<ul>
+  <li>
+    <strong>Green's Function Definition:</strong>
+    The Green's function <code>G(x, ξ, t)</code> represents the temperature at position <code>x</code>
+    and time <code>t</code>, due to an initial impulse at position <code>ξ</code>.
+  </li>
+  <li>
+    <strong>Heat Equation Green's Function:</strong>
+    For an infinite domain, the Green's function is given by:
+    <pre>
+    G(x, ξ, t) = (1 / √(4π α t)) * exp(-(x - ξ)² / (4 α t)).
+    </pre>
+  </li>
+  <li>
+    <strong>Solution:</strong>
+    The temperature <code>u(x, t)</code> is found by integrating the initial condition <code>f(ξ)</code>
+    weighted by the Green's function:
+    <pre>
+    u(x, t) = ∫₀ᴸ f(ξ) G(x, ξ, t) dξ,
+    </pre>
+    where <code>L</code> is the domain length.
+  </li>
+</ul>
+
+<h5>Why Use Green's Functions?</h5>
+<ul>
+  <li>
+    Allows solving the heat equation for <strong>arbitrary initial conditions</strong>.
+  </li>
+  <li>
+    Handles time evolution naturally by weighting contributions from the initial temperature distribution.
+  </li>
+  <li>
+    Provides insight into the diffusion process via the exponential decay in the Green's function.
+  </li>
+</ul>
+
+<h5>Steps to Solve Using Green's Functions:</h5>
+<ol>
+  <li>Define the Green's function <code>G(x, ξ, t)</code> for the problem.</li>
+  <li>Express the solution as <code>u(x, t) = ∫ f(ξ) G(x, ξ, t) dξ</code>.</li>
+  <li>Compute the integral for all points <code>x</code> and times <code>t</code>.</li>
+</ol>
+
 ## Finding solution bounds
 
 ## Deriving the heat equation in 1D
