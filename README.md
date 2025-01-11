@@ -64,6 +64,7 @@ As the heat equation is a linear PDE, we have to restrict the estimation methods
 ### Fourier series
 
 A Fourier series is an expansion of a periodic function into an infinite sum of trigonometric functions.
+In our case, Fourier series decomposes the initial temperature distribution f(x) into a sum of sine and cosine functions. These basis functions satisfy the boundary conditions and allow the heat equation to be solved as a series of time-evolving terms. Each term represents a mode of heat distribution, with higher modes decaying faster due to diffusion.
 
 <html>
 <h4 style="color:darkblue;">Initial Conditions in the Heat Equation</h4>
