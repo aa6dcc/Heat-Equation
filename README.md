@@ -87,22 +87,14 @@ This equation is a general statement regarding the conservation of thermal energ
 </body>
 </html>
 
-From there, we have:
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-</head>
 <body>
     <p>The heat flux is defined as:</p>
     <p>
         $$q(x + \Delta x, t) = -k \frac{\partial u}{\partial x}$$
     </p>
-    <p>The rate of change of heat flux is given by:</p>
+    <p>The rate of change of heat flux tells us how the heat varies from x to x + dx and is given by:</p>
     <p>
         $$-\frac{\partial q}{\partial x} = \lim_{\Delta x \to 0} \frac{q(x, t) - q(x + \Delta x, t)}{\Delta x}$$
     </p>
