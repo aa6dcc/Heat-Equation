@@ -116,6 +116,8 @@ In our case, Fourier series decomposes the initial temperature distribution f(x)
 </ul>
 </html>
 
+![image](https://github.com/user-attachments/assets/59b737a1-9264-4e87-8f05-73be0aeaaca9)
+
 ### Laplace transforms
 
 The Laplace transform is an integral transform that converts a variable in the time domain to a variable in the frequency domain. 
