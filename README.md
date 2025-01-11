@@ -241,11 +241,27 @@ Above we plotted the Fourier series for a sine wave as an initial condition.
 Finding the solution bounds for the heat equation involves estimating the maximum and minimum values of the temperature u(x,t) over the spatial domain and time. 
 Instead of using traditional statistical bounds derived from probability inequalities such as Chebyshev's inequality, we will try and use more precise and accurate physical methods. 
 
+Please find the Python code used for solution bounds here: [Solution bounds in Python](https://github.com/aa6dcc/Heat-Equation/tree/main/solution-bounds)
+
 ### Maximum Principle for Parabolic equations
 
 The heat equation satisfies the maximum principle, which states:
     <li>The maximum and minimum values of the solution u(x,t) occur either at the initial time (t=0) or on the boundary (x=0 or x=L)</li>
     <li>This implies that if u(x,0)=f(x), the bounds of u(x,t) are determined by the bounds of f(x) and any boundary conditions.</li>
+
+<p>
+    <strong>The Maximum Principle</strong> for parabolic equations is a fundamental result that ensures the solution of 
+    the heat equation attains its maximum and minimum values either at the initial time or on the boundaries of the 
+    spatial domain. This principle reflects the physical intuition that heat naturally flows from regions of higher 
+    temperature to lower temperature, preventing the creation of new extrema within the domain over time. The Maximum 
+    Principle is crucial for proving uniqueness, stability, and boundedness of solutions, providing a theoretical 
+    foundation for error analysis in numerical approximations and guaranteeing that solutions adhere to physical constraints.
+</p>
+
+
+![image](https://github.com/user-attachments/assets/1093a5cd-9c58-4a89-a32e-cc571cf568fa)
+
+Above is an example of a plot bounded using the maximum principle. 
 
 ### Bounding Using Initial and Boundary Conditions
 
@@ -253,12 +269,54 @@ If the initial condition f(x) is known, then u(x,t) is bounded by the maximum an
     <li>For Dirichlet boundary conditions (u(0,t)=u(L,t)=0), u(x,t) remains non-negative if f(x)≥0</li>
     <li>For Neumann boundary conditions (∂u/∂x=0 at boundaries), u(x,t) may preserve symmetry or maintain constant total heat</li>
 
+<p>
+    <strong>Bounding the solution</strong> to the heat equation using initial and boundary conditions ensures 
+    that the temperature distribution remains physically meaningful and adheres to the problem's constraints. 
+    Initial conditions provide the starting energy and structure of the solution, while boundary conditions define 
+    the interaction of the system with its surroundings, such as fixed or insulated boundaries. These bounds guarantee 
+    that the solution does not exceed the maximum or minimum values dictated by the initial and boundary inputs, 
+    reflecting the maximum principle for parabolic equations. This approach is essential for stability analysis, 
+    validating numerical approximations, and ensuring the consistency of the solution with physical laws.
+</p>
+
+
+![image](https://github.com/user-attachments/assets/088fea1f-cda8-4732-b12b-3da97f80eacd)
+
+Above is an example of a plot bounded using initial and boundary conditions.
+
 ### Energy methods
 
 We can also use the energy of the signal:
     <li>The energy (integral of u^2*(x,t)) of the solution decreases over time due to diffusion</li>
-    <li>The norm ∥u∥∞ decreases monotonically, providing a practical way to estimate bounds as heat diffuses</li>
-    
+    <li>The norm ∥u∥ of ∞ decreases monotonically, providing a practical way to estimate bounds as heat diffuses</li>
+
+<p>
+    <strong>Energy</strong> plays a central role in understanding the behavior of solutions to the heat equation, 
+    as it quantifies the total "strength" or magnitude of the temperature distribution over the spatial domain. 
+    The energy, defined as <math>
+        <msub><mrow>&#x2225;</mrow><mrow>u(x, t)</mrow></msub><sup>2</sup> = <mo>&#x222b;</mo> u(x, t)<sup>2</sup> dx
+    </math>, decreases over time due to the dissipative nature of the heat equation, reflecting the physical principle 
+    of heat flow from high to low temperatures. By analyzing the energy, we can establish bounds on the solution, 
+    ensuring it remains well-behaved and converges as time progresses. Energy estimates are also critical for proving 
+    stability, error bounds in numerical methods, and demonstrating the uniqueness of solutions.
+</p>
+
+![image](https://github.com/user-attachments/assets/aaae09bc-15aa-4304-8b6f-f1d0b46ae540)
+
+Above is an example of a plot bounded using the energy method
+
+In fact, we can also use Cauchy-Schwarz's inequality.
+<p>The <strong>Cauchy-Schwarz inequality</strong> plays a crucial role in analyzing the energy dynamics of the heat equation. 
+    The energy, defined as <math>
+        <msub><mrow>&#x2225;</mrow><mrow>u(x, t)</mrow></msub><sup>2</sup> = <mo>&#x222b;</mo> u(x, t)<sup>2</sup> dx
+    </math>, quantifies the total "magnitude" of the solution over the spatial domain. During analysis, terms like 
+    <code>|⟨u, v⟩|</code> appear, representing inner products of functions. Using Cauchy-Schwarz, these terms are bounded as 
+    <code>|⟨u, v⟩| ≤ ||u|| ||v||</code>, ensuring numerical stability and aiding in deriving bounds for the solution. This 
+    inequality also supports demonstrating exponential decay of energy, highlighting the dissipative nature of the heat equation 
+    and ensuring the solution stabilizes over time.</p>
+
+![image](https://github.com/user-attachments/assets/4ad6b432-9cec-44e7-ade6-85d8de180d77)
+
 ## Deriving the heat equation in 1D
 
 ### Heat flux 
