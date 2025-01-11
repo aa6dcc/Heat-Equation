@@ -67,27 +67,6 @@ A Fourier series is an expansion of a periodic function into an infinite sum of 
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heat Equation with Fourier Series</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        .equation {
-            margin: 20px 0;
-            text-align: center;
-        }
-        h1, h2 {
-            text-align: center;
-        }
-    </style>
-</head>
 <body>
     <h1>Heat Equation Solution Using Fourier Series</h1>
     <p>
