@@ -4,16 +4,16 @@ The heat equation is a partial differential equation.
 
 It is most commonly seen under its standard form in one dimension:
 
-![Heat Equation](https://latex.codecogs.com/svg.latex?\frac{\partial%20u}{\partial%20t}%20=%20\alpha%20\frac{\partial^2%20u}{\partial%20x^2})
-
-But it in higher dimensions it can be expressed as:
-
-![Heat Equation](https://latex.codecogs.com/svg.latex?\frac{\partial%20u}{\partial%20t}%20=%20\alpha%20\nabla^2%20u)
-
 <p align="center">
     <img src="https://latex.codecogs.com/svg.latex?\frac{\partial%20u}{\partial%20t}%20=%20\alpha%20\frac{\partial^2%20u}{\partial%20x^2}" alt="1D Heat Equation">
     <br>
+</p>
+
+But it in higher dimensions it can be expressed as:
+
+<p align="center">
     <img src="https://latex.codecogs.com/svg.latex?\frac{\partial%20u}{\partial%20t}%20=%20\alpha%20\nabla^2%20u" alt="Higher Dimensional Heat Equation">
+    <br>
 </p>
 
 Where:
