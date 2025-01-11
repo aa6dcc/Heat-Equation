@@ -27,13 +27,13 @@ It was first developed by French mathematician and physicist Joseph Fourier in 1
 
 | Summary   |
 |-----------|
-| Introduction |
-| General solution to the 1-D wave equation: d'Alembert's approach |
-| Newton-Raphson estimation method |
-| Finding solution bounds |
-| Generalizing the solution technique for higher orders |
-| Computational methods |
-| Optimization |
+| [Introduction](#Introduction) |
+| [General solution to the 1-D wave equation: d'Alembert's approach](#General-solution-to-the-1-D-wave-equation:-d'Alembert's-approach) |
+| [Newton-Raphson estimation method](#Newton-Raphson-estimation-method) |
+| [Finding solution bounds](#Finding-solution-bounds) |
+| [Generalizing the solution technique for higher orders](#Generalizing-the-solution-for-higher-orders) |
+| [Computational methods](#Computational-methods) |
+| [Optimization](#Optimization) |
 
 
 At steady state, the heat equation simplifies down to Laplace's equation, a second order partial differential equation:
