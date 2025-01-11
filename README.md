@@ -10,6 +10,13 @@ But it in higher dimensions it can be expressed as:
 
 ![Heat Equation](https://latex.codecogs.com/svg.latex?\frac{\partial%20u}{\partial%20t}%20=%20\alpha%20\nabla^2%20u)
 
+<div style="text-align: center;">
+    <img src="https://latex.codecogs.com/svg.latex?\frac{\partial%20u}{\partial%20t}%20=%20\alpha%20\frac{\partial^2%20u}{\partial%20x^2}" alt="1D Heat Equation">
+    <br>
+    <img src="https://latex.codecogs.com/svg.latex?\frac{\partial%20u}{\partial%20t}%20=%20\alpha%20\nabla^2%20u" alt="Higher Dimensional Heat Equation">
+</div>
+
+
 Where:
 - `u(x, t)`: Temperature at position `x` and time `t`
 - `α`: Thermal diffusivity of the material
