@@ -65,6 +65,54 @@ As the heat equation is a linear PDE, we have to restrict the estimation methods
 
 A Fourier series is an expansion of a periodic function into an infinite sum of trigonometric functions.
 
+<html>
+<h2 style="color:darkblue;">Initial Conditions in the Heat Equation</h2>
+
+<p>The <strong>heat equation</strong> in one dimension is:</p>
+<p style="text-align: center;">
+  <code>∂u(x,t)/∂t = α ∂²u(x,t)/∂x²</code>
+</p>
+<p>where:</p>
+<ul>
+  <li><code>u(x, t)</code> is the temperature at position <code>x</code> and time <code>t</code>.</li>
+  <li><code>α</code> is the thermal diffusivity (a constant).</li>
+</ul>
+
+<h3 style="color:darkgreen;">Initial Conditions</h3>
+<p>To solve this equation, we need to define the temperature distribution at the initial time <code>t = 0</code>. This is called the <em>initial condition</em>:</p>
+<p style="text-align: center;">
+  <code>u(x, 0) = f(x)</code>
+</p>
+<p>where <code>f(x)</code> is a function that specifies the initial temperature along the rod.</p>
+
+<h3 style="color:darkgreen;">Why Sine Functions Are Common in Fourier Series Solutions</h3>
+<p>The solution to the heat equation often uses a <strong>Fourier series</strong> expansion:</p>
+<p style="text-align: center;">
+  <code>u(x, t) = Σ<sub>n=1</sub>∞ b<sub>n</sub> sin(nπx/L) exp(-n²π²αt/L²)</code>
+</p>
+
+<p>Here:</p>
+<ul>
+  <li><code>b<sub>n</sub></code> are the Fourier coefficients determined from the initial condition <code>f(x)</code>.</li>
+  <li><code>sin(nπx/L)</code> naturally satisfies the boundary conditions <code>u(0, t) = u(L, t) = 0</code> (Dirichlet conditions).</li>
+</ul>
+
+<p>The coefficients <code>a<sub>n</sub></code> are zero because sine functions are <strong>odd</strong>, and their integral over a symmetric interval cancels out.</p>
+
+
+<h3 style="color:darkgreen;">Generalizing the Initial Condition</h3>
+<p>Although a sine function is commonly used for <code>f(x)</code>, the method is general and works for any valid <code>f(x)</code>. The Fourier coefficients <code>b<sub>n</sub></code> are computed using:</p>
+<p style="text-align: center;">
+  <code>b<sub>n</sub> = (2/L) ∫<sub>0</sub><sup>L</sup> f(x) sin(nπx/L) dx</code>
+</p>
+<p>This allows for initial conditions like:</p>
+<ul>
+  <li><code>f(x) = sin(πx)</code>: A sine wave initial temperature.</li>
+  <li><code>f(x) = x(1 - x)</code>: A parabolic initial temperature.</li>
+  <li><code>f(x) = 1</code>: A uniform temperature along the rod.</li>
+</ul>
+</html>
+
 ### Laplace transforms
 
 The Laplace transform is an integral transform that converts a variable in the time domain to a variable in the frequency domain. 
