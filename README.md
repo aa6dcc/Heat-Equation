@@ -71,7 +71,7 @@ The Laplace transform is an integral transform that converts a variable in the t
 
 ### Green functions
 
-A Green function is the impulse response of linear inhomogeneous PDE differential operators. 
+A Green function is the impulse response of linear inhomogeneous PDE differential operators. It's a mathematical tool which describes how a cause an initial time affects an effect at a later time. 
 
 ## Finding solution bounds
 
