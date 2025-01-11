@@ -71,22 +71,21 @@ The rate of change of heat energy in time is the sum of the heat flux through th
 <body>
     <p>The formula for heat energy is given by:</p>
     <p>
-        $$\frac{\partial}{\partial t} \Big(c(x) \rho(x) u(x, t)\Big) = -\frac{\partial q}{\partial x} + Q(x, t)$$
+        $$c(x) \rho(x) \frac{\partial u(x, t)}{\partial t} = -\frac{\partial q}{\partial x} + Q(x, t)$$
     </p>
     <p>
-        <small>
-            Where:
-            <ul>
-                <li>\( c(x) \): Specific heat</li>
-                <li>\( \rho(x) \): Density</li>
-                <li>\( u(x, t) \): Heat energy</li>
-                <li>\( q \): Heat flux</li>
-                <li>\( Q(x, t) \): Heat source</li>
-            </ul>
-        </small>
+        <small>Where:</small>
+        <ul>
+            <li><code>c(x)</code>: Specific heat</li>
+            <li><code>ρ(x)</code>: Density</li>
+            <li><code>u(x, t)</code>: Internal energy</li>
+            <li><code>q</code>: Heat flux</li>
+            <li><code>Q(x, t)</code>: Heat source</li>
+        </ul>
     </p>
 </body>
 </html>
+
 
 
 This equation is a general statement regarding the conservation of thermal energy. 
