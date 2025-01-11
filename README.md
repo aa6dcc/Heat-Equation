@@ -123,10 +123,64 @@ Above we plotted the Fourier series for a sine wave as an initial condition.
 ### Laplace transforms
 
 The Laplace transform is an integral transform that converts a variable in the time domain to a variable in the frequency domain. 
+The Laplace transform simplifies the heat equation by converting it from a partial differential equation in time and space to an algebraic equation in the Laplace domain. This approach is particularly useful for problems with time-dependent boundary or initial conditions, as it allows systematic analysis. Once solved, the inverse transform retrieves the time-domain solution, capturing the evolution of heat distribution.
+
+<html lang="en">
+  <body>
+    <h2>What is a Laplace Transform?</h2>
+    <p> The Laplace transform is a mathematical tool that converts a function
+      <code>u(x, t)</code>in time<code>t</code>into a function in terms of a
+      new variable<code>s</code>.This simplifies solving differential
+      equations by turning time-dependent problems into algebraic ones.</p>
+    <p>The Laplace transform of <code>u(x, t)</code> is defined as:</p>
+    <div class="equation">
+      <p>U(x, s) = ∫<sub>0</sub><sup>∞</sup> u(x, t) e<sup>-st</sup> dt
+      </p>
+    </div>
+    <h2>The Heat Equation</h2>
+    <p>The one-dimensional heat equation is given by:</p>
+    <div class="equation">
+      <p>
+        ∂u(x, t)/∂t = α ∂<sup>2</sup>u(x, t)/∂x<sup>2</sup>
+      </p>
+    </div>
+    <p>with initial condition:</p>
+    <div class="equation">
+      <p>u(x, 0) = f(x)</p>
+    </div>
+    <h2>Applying the Laplace Transform</h2>
+    <p>
+      Taking the Laplace transform of both sides of the heat equation with
+      respect to <code>t</code>, we get:
+    </p>
+    <div class="equation">
+      <p>
+        sU(x, s) - f(x) = α ∂<sup>2</sup>U(x, s)/∂x<sup>2</sup>
+      </p>
+    </div>
+    <p>Rearranging gives a second-order ordinary differential equation in <code>x</code>:</p>
+    <div class="equation">
+      <p>
+        ∂<sup>2</sup>U(x, s)/∂x<sup>2</sup> - (s/α) U(x, s) = -f(x)/α
+      </p>
+    </div>
+    <h2>Solving the Transformed Equation</h2>
+    <p>
+      The general solution of this ODE depends on the boundary conditions.
+      Once the solution <code>U(x, s)</code> is obtained, the inverse Laplace
+      transform is applied to recover <code>u(x, t)</code> in the time domain.
+    </p>
+  </body>
+</html>
+
+![image](https://github.com/user-attachments/assets/49fd437d-6058-4b0b-8b15-dcae363ec8ef)
+
+Above we plotted the Fourier series for a sine wave as an initial condition.
 
 ### Green functions
 
 A Green function is the impulse response of linear inhomogeneous PDE differential operators. It's a mathematical tool which describes how a cause an initial time affects an effect at a later time. 
+Green's functions offer a way to represent the solution of the heat equation as a convolution with the initial condition, describing how heat propagates over time. They naturally handle boundary conditions and source terms, making them suitable for complex geometries or varying heat sources. Additionally, the method provides a fundamental solution that illustrates how heat spreads from a point source.
 
 <h4 style="color:darkblue;">Green's Function Approach for the Heat Equation</h4>
 
@@ -182,6 +236,10 @@ A Green function is the impulse response of linear inhomogeneous PDE differentia
   <li>Express the solution as <code>u(x, t) = ∫ f(ξ) G(x, ξ, t) dξ</code>.</li>
   <li>Compute the integral for all points <code>x</code> and times <code>t</code>.</li>
 </ol>
+
+![image](https://github.com/user-attachments/assets/0d963e9e-eabd-457a-9504-0858174f16a5)
+
+Above we plotted the Fourier series for a sine wave as an initial condition.
 
 ## Finding solution bounds
 
