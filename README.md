@@ -59,38 +59,28 @@ In effect, the heat equation can be thought of as an extension of Laplace's equa
 
 Consider the temperature distribution u(x,t) in a thin metal rod of length L. 
 
-![image](https://github.com/user-attachments/assets/1f24faf7-305e-40d1-85f6-eb92d40e4cb2)
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/1f24faf7-305e-40d1-85f6-eb92d40e4cb2" alt="Metal Rod">
+    <br>
+</p>
 
 The rate of change of heat energy in time is the sum of the heat flux through the boundary to its neighbours and the heat energy generated at any point in space/time. 
 
-<p>The rate of change of heat energy in time is given by:</p>
-<p>
-    <math xmlns="http://www.w3.org/1998/Math/MathML">
-        <mfrac>
-            <mrow>
-                <mi>d</mi>
-                <mi>Q</mi>
-            </mrow>
-            <mrow>
-                <mi>d</mi>
-                <mi>t</mi>
-            </mrow>
-        </mfrac>
-        <mo>=</mo>
-        <mo>&#8747;</mo>
-        <mi>&#8706;</mi>
-        <mi>q</mi>
-        <mo>/</mo>
-        <mi>&#8706;x</mi>
-        <mo>+</mo>
-        <mi>Q</mi>
-        <mo>&#40;</mo>
-        <mi>x</mi>
-        <mo>,</mo>
-        <mi>t</mi>
-        <mo>&#41;</mo>
-    </math>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <p>The rate of change of heat energy in time is given by:</p>
+    <p>
+        $$\frac{dQ}{dt} = \int \frac{\partial q}{\partial x} + Q(x, t)$$
+    </p>
+</body>
+</html>
+
 
 This equation is a general statement regarding the conservation of thermal energy. 
 
