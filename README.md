@@ -69,12 +69,25 @@ The rate of change of heat energy in time is the sum of the heat flux through th
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <p>The rate of change of heat energy in time is given by:</p>
+    <p>The formula for heat energy is given by:</p>
     <p>
-        $$\frac{dQ}{dt} = \int \frac{\partial q}{\partial x} + Q(x, t)$$
+        $$\frac{\partial}{\partial t} \Big(c(x) \rho(x) u(x, t)\Big) = -\frac{\partial q}{\partial x} + Q(x, t)$$
+    </p>
+    <p>
+        <small>
+            Where:
+            <ul>
+                <li>\( c(x) \): Specific heat</li>
+                <li>\( \rho(x) \): Density</li>
+                <li>\( u(x, t) \): Heat energy</li>
+                <li>\( q \): Heat flux</li>
+                <li>\( Q(x, t) \): Heat source</li>
+            </ul>
+        </small>
     </p>
 </body>
 </html>
+
 
 This equation is a general statement regarding the conservation of thermal energy. 
 
