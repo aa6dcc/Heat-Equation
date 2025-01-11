@@ -127,17 +127,12 @@ The Laplace transform simplifies the heat equation by converting it from a parti
 
 <html lang="en">
   <body>
-    <h2>What is a Laplace Transform?</h2>
-    <p> The Laplace transform is a mathematical tool that converts a function
-      <code>u(x, t)</code>in time<code>t</code>into a function in terms of a
-      new variable<code>s</code>.This simplifies solving differential
-      equations by turning time-dependent problems into algebraic ones.</p>
     <p>The Laplace transform of <code>u(x, t)</code> is defined as:</p>
     <div class="equation">
       <p>U(x, s) = ∫<sub>0</sub><sup>∞</sup> u(x, t) e<sup>-st</sup> dt
       </p>
     </div>
-    <h2>The Heat Equation</h2>
+    <h4>The Heat Equation</h4>
     <p>The one-dimensional heat equation is given by:</p>
     <div class="equation">
       <p>
@@ -148,7 +143,7 @@ The Laplace transform simplifies the heat equation by converting it from a parti
     <div class="equation">
       <p>u(x, 0) = f(x)</p>
     </div>
-    <h2>Applying the Laplace Transform</h2>
+    <h4>Applying the Laplace Transform</h4>
     <p>
       Taking the Laplace transform of both sides of the heat equation with
       respect to <code>t</code>, we get:
@@ -164,7 +159,7 @@ The Laplace transform simplifies the heat equation by converting it from a parti
         ∂<sup>2</sup>U(x, s)/∂x<sup>2</sup> - (s/α) U(x, s) = -f(x)/α
       </p>
     </div>
-    <h2>Solving the Transformed Equation</h2>
+    <h4>Solving the Transformed Equation</h4>
     <p>
       The general solution of this ODE depends on the boundary conditions.
       Once the solution <code>U(x, s)</code> is obtained, the inverse Laplace
