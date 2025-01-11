@@ -94,7 +94,7 @@ This equation is a general statement regarding the conservation of thermal energ
 ### Fourier's law of heat conduction
 
 Fourier worked on the heat equation (in fact he invented the Fourier transform as a tool to solve the heat equation) and derived Fourier's law of heat conduction.
-```md
+```txt
 Whilst he was analyzing the heat equation, he made the following three observations:
     - There is no heat flux when the temperature is constant
     - Heat energy flows from high temperature to low temperature
