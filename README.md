@@ -157,12 +157,12 @@ When we combine the information above, we get:
 
 ## Generalizing the solution technique
 
-An idealized solution to the heat equation would be plugging in 
+An idealized solution to the heat equation would be plugging in a product of a sine and exponential function.
 
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <h1>Solution to the Heat Equation</h1>
+    <p>Solution to the Heat Equation</p>
     <p>The heat equation in one dimension is:</p>
     <p>
         $$\frac{\partial u}{\partial t} = \alpha \frac{\partial^2 u}{\partial x^2}$$
@@ -171,11 +171,11 @@ An idealized solution to the heat equation would be plugging in
     <p>
         $$u(x, t) = \sin(x) e^{-\alpha t}$$
     </p>
-    <h2>Step 1: Compute \(\frac{\partial u}{\partial t}\)</h2>
+    <p>Step 1: Compute \(\frac{\partial u}{\partial t}\)</p>
     <p>
         $$\frac{\partial u}{\partial t} = \sin(x) \cdot (-\alpha) e^{-\alpha t}$$
     </p>
-    <h2>Step 2: Compute \(\frac{\partial^2 u}{\partial x^2}\)</h2>
+    <p>Step 2: Compute \(\frac{\partial^2 u}{\partial x^2}\)</p>
     <p>First, find \(\frac{\partial u}{\partial x}\):</p>
     <p>
         $$\frac{\partial u}{\partial x} = \cos(x) e^{-\alpha t}$$
@@ -184,7 +184,7 @@ An idealized solution to the heat equation would be plugging in
     <p>
         $$\frac{\partial^2 u}{\partial x^2} = -\sin(x) e^{-\alpha t}$$
     </p>
-    <h2>Step 3: Substitute into the heat equation</h2>
+    <p>Step 3: Substitute into the heat equation</p>
     <p>Substitute \( \frac{\partial u}{\partial t} \) and \( \frac{\partial^2 u}{\partial x^2} \) into the heat equation:</p>
     <p>
         $$\sin(x)(-\alpha)e^{-\alpha t} = \alpha(-\sin(x)e^{-\alpha t})$$
@@ -193,7 +193,7 @@ An idealized solution to the heat equation would be plugging in
     <p>
         $$-\alpha = -\alpha$$
     </p>
-    <h2>Hence we can see a product of a sine and exponential function is a solution. </h2>
+    <p>Hence we can see a product of a sine and exponential function is a solution. </p>
 </body>
 </html>
 
