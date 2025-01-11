@@ -96,12 +96,9 @@ This equation is a general statement regarding the conservation of thermal energ
 Fourier worked on the heat equation (in fact he invented the Fourier transform as a tool to solve the heat equation) and derived Fourier's law of heat conduction.
 
 Whilst he was analyzing the heat equation, he made the following three observations:
-
-    - There is no heat flux when the temperature is constant
-    
-    - Heat energy flows from high temperature to low temperature
-    
-    - There is more heat flux when there is a larger temperature difference
+    1) There is no heat flux when the temperature is constant
+    2) Heat energy flows from high temperature to low temperature
+    3) There is more heat flux when there is a larger temperature difference
 
 
 <!DOCTYPE html>
