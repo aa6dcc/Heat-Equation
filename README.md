@@ -65,6 +65,7 @@ As the heat equation is a linear PDE, we have to restrict the estimation methods
 
 A Fourier series is an expansion of a periodic function into an infinite sum of trigonometric functions. 
 
+```HTML
 <!DOCTYPE html>
 <html lang="en">
 <body>
@@ -140,6 +141,7 @@ A Fourier series is an expansion of a periodic function into an infinite sum of 
     </p>
 </body>
 </html>
+```
 
 
 ### Laplace transforms
