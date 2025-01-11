@@ -65,6 +65,7 @@ Consider the temperature distribution u(x,t) in a thin metal rod of length L.
 </p>
 
 The rate of change of heat energy in time is the sum of the heat flux through the boundary to its neighbours and the heat energy generated at any point in space/time. 
+This equation is a general statement regarding the conservation of thermal energy. 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -86,9 +87,56 @@ The rate of change of heat energy in time is the sum of the heat flux through th
 </body>
 </html>
 
+From there, we have:
 
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left cylinder -->
+  <circle cx="100" cy="100" r="30" stroke="white" fill="none" stroke-width="2"/>
+  <!-- Right cylinder -->
+  <circle cx="200" cy="100" r="30" stroke="white" fill="none" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Arrow -->
+  <path d="M130 100 L170 100" stroke="white" fill="none" stroke-width="2"/>
+  <path d="M170 100 L160 95 L160 105 Z" fill="white"/>
+  
+  <!-- Text labels -->
+  <text x="70" y="100" fill="white" font-family="Arial" font-size="14">q(x,t)</text>
+  <text x="210" y="100" fill="white" font-family="Arial" font-size="14">q(x+Δx,t)</text>
+</svg>
 
-This equation is a general statement regarding the conservation of thermal energy. 
+<div class="equation">
+  <p>q(x,t) = heat flux from left to right (thermal energy/area)</p>
+  
+  <p>
+    <sup>∂q</sup>⁄<sub>∂x</sub> = lim<sub>Δx→0</sub>
+    <span class="fraction">
+      q(x,t) - q(x+Δx,t)
+      <hr>
+      Δx
+    </span>
+  </p>
+
+  <p>q(x,t) = -k<span class="fraction">∂u<hr>∂x</span></p>
+</div>
+
+.equation {
+  font-family: "Times New Roman", serif;
+  font-size: 16px;
+}
+
+.fraction {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.fraction hr {
+  border: none;
+  border-top: 1px solid black;
+  margin: 2px 0;
+}
+
+Fourier worked on the heat equation (in fact he invented the Fourier transform as a tool to solve the heat equation) and derived Fourier's law of heat conduction, which we 
 
 ## Generalizing the solution technique
 
