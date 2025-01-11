@@ -65,47 +65,60 @@ As the heat equation is a linear PDE, we have to restrict the estimation methods
 
 A Fourier series is an expansion of a periodic function into an infinite sum of trigonometric functions. 
 
-# Heat Equation and Fourier Series
+<html lang="en">
+<body>
+    <h1>Heat Equation and Fourier Series</h1>
 
-## 1. The Heat Equation
-The heat equation in one dimension is given by:
+    <div class="section">
+        <h2>1. The Heat Equation</h2>
+        <p>The heat equation in one dimension is given by:</p>
+        <div class="equation">
+            <img src="https://quicklatex.com/cache3/d3/ql_6e4b85a324ad05a6d6c77b674d930d3_l3.png" alt="Heat equation: ∂u(x,t)/∂t = α ∂²u(x,t)/∂x²">
+        </div>
+        <p>Where:</p>
+        <ul>
+            <li><b>u(x, t)</b>: Temperature at position <b>x</b> and time <b>t</b>,</li>
+            <li><b>α</b>: Thermal diffusivity,</li>
+            <li>Boundary conditions: <b>u(0, t) = u(L, t) = 0</b> (Dirichlet conditions),</li>
+            <li>Initial condition: <b>u(x, 0) = f(x)</b>.</li>
+        </ul>
+    </div>
 
-![Heat Equation](https://quicklatex.com/cache3/d3/ql_6e4b85a324ad05a6d6c77b674d930d3_l3.png)
+    <div class="section">
+        <h2>2. Fourier Series Solution</h2>
+        <p>We assume a solution of the form:</p>
+        <div class="equation">
+            <img src="https://quicklatex.com/cache3/8d/ql_383da3d5d5942f5e13cb223801e1588d_l3.png" alt="Fourier Series Solution">
+        </div>
+        <p>Where:</p>
+        <ul>
+            <li><b>bₙ</b>: Fourier coefficients determined by the initial condition <b>u(x, 0) = f(x)</b>,</li>
+            <li>The sine functions satisfy the boundary conditions.</li>
+        </ul>
+    </div>
 
-Where:
-- **u(x, t)**: Temperature at position **x** and time **t**,
-- **α**: Thermal diffusivity,
-- Boundary conditions: **u(0, t) = u(L, t) = 0** (Dirichlet conditions),
-- Initial condition: **u(x, 0) = f(x)**.
+    <div class="section">
+        <h2>3. Calculating Fourier Coefficients</h2>
+        <p>The Fourier coefficients <b>bₙ</b> are calculated using the orthogonality of sine functions:</p>
+        <div class="equation">
+            <img src="https://quicklatex.com/cache3/91/ql_b6c183cf69076f8cd03da7f09d510191_l3.png" alt="Fourier Coefficients Formula">
+        </div>
+        <p>These coefficients represent the contribution of each sine mode to the overall solution.</p>
+    </div>
 
----
+    <div class="section">
+        <h2>4. Final Solution</h2>
+        <p>Combining everything, the solution is:</p>
+        <div class="equation">
+            <img src="https://quicklatex.com/cache3/44/ql_1a546c1668d75ac176e12eace242044_l3.png" alt="Final Fourier Series Solution">
+        </div>
+    </div>
 
-## 2. Fourier Series Solution
-We assume a solution of the form:
-
-![Fourier Series Solution](https://quicklatex.com/cache3/8d/ql_383da3d5d5942f5e13cb223801e1588d_l3.png)
-
-Where:
-- **bₙ**: Fourier coefficients determined by the initial condition **u(x, 0) = f(x)**,
-- The sine functions satisfy the boundary conditions.
-
----
-
-## 3. Calculating Fourier Coefficients
-The Fourier coefficients **bₙ** are calculated using the orthogonality of sine functions:
-
-![Fourier Coefficients](https://quicklatex.com/cache3/91/ql_b6c183cf69076f8cd03da7f09d510191_l3.png)
-
-These coefficients represent the contribution of each sine mode to the overall solution.
-
----
-
-## 4. Final Solution
-Combining everything, the solution is:
-
-![Final Fourier Series Solution](https://quicklatex.com/cache3/44/ql_1a546c1668d75ac176e12eace242044_l3.png)
-
-This solution provides the temperature distribution **u(x, t)** at any position **x** and time **t**.
+    <p style="text-align: center;">
+        This solution provides the temperature distribution <b>u(x, t)</b> at any position <b>x</b> and time <b>t</b>.
+    </p>
+</body>
+</html>
 
 
 ### Laplace transforms
