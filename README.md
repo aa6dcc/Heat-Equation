@@ -171,21 +171,21 @@ An idealized solution to the heat equation would be plugging in a product of a s
     <p>
         $$u(x, t) = \sin(x) e^{-\alpha t}$$
     </p>
-    <p>Step 1: Compute \(\frac{\partial u}{\partial t}\)</p>
+    <p>Step 1: Compute ∂u/∂t</p>
     <p>
         $$\frac{\partial u}{\partial t} = \sin(x) \cdot (-\alpha) e^{-\alpha t}$$
     </p>
-    <p>Step 2: Compute \(\frac{\partial^2 u}{\partial x^2}\)</p>
-    <p>First, find \(\frac{\partial u}{\partial x}\):</p>
+    <p>Step 2: Compute ∂²u/∂x²</p>
+    <p>First, find ∂u/∂x::</p>
     <p>
         $$\frac{\partial u}{\partial x} = \cos(x) e^{-\alpha t}$$
     </p>
-    <p>Then, find \(\frac{\partial^2 u}{\partial x^2}\):</p>
+    <p>Then, find ∂²u/∂x²:</p>
     <p>
         $$\frac{\partial^2 u}{\partial x^2} = -\sin(x) e^{-\alpha t}$$
     </p>
     <p>Step 3: Substitute into the heat equation</p>
-    <p>Substitute \( \frac{\partial u}{\partial t} \) and \( \frac{\partial^2 u}{\partial x^2} \) into the heat equation:</p>
+    <p>Substitute ∂u/∂t and ∂²u/∂x² into the heat equation:</p>
     <p>
         $$\sin(x)(-\alpha)e^{-\alpha t} = \alpha(-\sin(x)e^{-\alpha t})$$
     </p>
