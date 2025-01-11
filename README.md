@@ -69,9 +69,7 @@ The rate of change of heat energy in time is the sum of the heat flux through th
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <p>The rate of change of heat energy in time is given by:</p>
@@ -80,7 +78,6 @@ The rate of change of heat energy in time is the sum of the heat flux through th
     </p>
 </body>
 </html>
-
 
 This equation is a general statement regarding the conservation of thermal energy. 
 
