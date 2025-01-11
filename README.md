@@ -92,7 +92,7 @@ This equation is a general statement regarding the conservation of thermal energ
 <body>
     <p>The heat flux is defined as:</p>
     <p>
-        $$q(x + \Delta x, t) = -k \frac{\partial u}{\partial x}$$
+        $$q(x, t) = -k \frac{\partial u}{\partial x}$$
     </p>
     <p>The rate of change of heat flux tells us how the heat varies from x to x + dx and is given by:</p>
     <p>
