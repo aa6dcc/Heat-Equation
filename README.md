@@ -162,7 +162,6 @@ An idealized solution to the heat equation would be plugging in a product of a s
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <p>Solution to the Heat Equation</p>
     <p>The heat equation in one dimension is:</p>
     <p>
         $$\frac{\partial u}{\partial t} = \alpha \frac{\partial^2 u}{\partial x^2}$$
