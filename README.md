@@ -103,7 +103,7 @@ Whilst he was analyzing the heat equation, he made the following three observati
     <p>
         $$q(x, t) = -k \frac{\partial u}{\partial x}$$
     </p>
-    <p>The rate of change of heat flux tells us how the heat varies from x to x + dx and is given by:</p>
+    <p>The rate of change of heat flux tells us how the heat varies from x to (x + Δx) and is given by:</p>
     <p>
         $$-\frac{\partial q}{\partial x} = \lim_{\Delta x \to 0} \frac{q(x, t) - q(x + \Delta x, t)}{\Delta x}$$
     </p>
@@ -130,12 +130,15 @@ When we combine the information above, we get:
     <p>
         $$c(x) \rho(x) \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2} + Q$$
     </p>
-    <p>Assuming \( c, \rho, k \) are constant in space, the equation simplifies to:</p>
+    <p>Assuming c, ρ, and k are constant in space, the equation simplifies to:</p>
     <p>
         $$\frac{\partial u}{\partial t} = \frac{k}{c \rho} \frac{\partial^2 u}{\partial x^2} + \frac{1}{c \rho} Q$$
     </p>
+    <p>since we have that</p>
     <p>
-        <small>Where:</small>
+        $$- \frac{\partial}{\partial x} \left( -K \frac{\partial u}{\partial x} \right) = +K \frac{\partial^2 u}{\partial x^2}$$
+    </p>
+    <p>
         <ul>
             <li><code>c(x)</code>: Specific heat</li>
             <li><code>ρ(x)</code>: Density</li>
