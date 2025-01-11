@@ -89,42 +89,24 @@ This equation is a general statement regarding the conservation of thermal energ
 
 From there, we have:
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heat Flux Diagram</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-</head>
-<body>
-    <h1>Heat Flux Diagram and Equations</h1>
-    <div>
-        <p>
-            Heat flux, denoted as \( q(x, t) \), is the thermal energy transferred per unit time:
-        </p>
-        <p>
-            \[
-            q(x + \Delta x, t) = -k \frac{\partial u}{\partial x}
-            \]
-        </p>
-        <p>
-            The rate of change of heat flux is given by:
-        </p>
-        <p>
-            \[
-            -\frac{\partial q}{\partial x} = \lim_{\Delta x \to 0} \frac{q(x, t) - q(x + \Delta x, t)}{\Delta x}
-            \]
-        </p>
-        <p>
-            Here, \( k \) is the thermal conductivity, \( u \) is the temperature, and \( \Delta x \) is the small spatial increment.
-        </p>
-    </div>
-</body>
-</html>
+### Heat Flux Equations
+
+The heat flux \( q(x, t) \) is defined as the thermal energy per unit time:
+
+\[
+q(x + \Delta x, t) = -k \frac{\partial u}{\partial x}
+\]
+
+The rate of change of heat flux is given by:
+
+\[
+-\frac{\partial q}{\partial x} = \lim_{\Delta x \to 0} \frac{q(x, t) - q(x + \Delta x, t)}{\Delta x}
+\]
+
+Where:
+- \( k \): Thermal conductivity
+- \( u \): Temperature
+- \( \Delta x \): Spatial increment
 
 
 Fourier worked on the heat equation (in fact he invented the Fourier transform as a tool to solve the heat equation) and derived Fourier's law of heat conduction, which we 
