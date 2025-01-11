@@ -68,9 +68,6 @@ The rate of change of heat energy in time is the sum of the heat flux through th
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-</head>
 <body>
     <p>The rate of change of heat energy in time is given by:</p>
     <p>
