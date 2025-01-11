@@ -31,8 +31,6 @@ It was first developed by French mathematician and physicist Joseph Fourier in 1
 | [Newton-Raphson estimation method](#Newton-Raphson-estimation-method) |
 | [Finding solution bounds](#Finding-solution-bounds) |
 | [Deriving the heat equation in 1D](#Deriving-the-heat-equation-in-1-D)|
-    | [Heat flux](#Heat-flux) |
-    | [Fourier's law of heat conduction](#Fourier-law-heat-conduction) |
 | [Generalizing the solution technique](#Generalizing-the-solution-technique) |
 | [Computational methods](#Computational-methods) |
 | [Optimization](#Optimization) |
@@ -41,7 +39,7 @@ It was first developed by French mathematician and physicist Joseph Fourier in 1
 
 As mentioned above, the heat equation is a partial differential equation which arises in problems of heat conduction.
 
-At steady state, the heat equation simplifies down to Laplace's equation, a second order partial differential equation:
+At steady state (a state in which the system doesn't change through time), the heat equation simplifies down to Laplace's equation, a second order partial differential equation:
 
 <p align="center">
     <img src="https://latex.codecogs.com/svg.latex?\nabla^2u%20=%200" alt="Laplace's Equation">
@@ -59,6 +57,7 @@ In effect, the heat equation can be thought of as an extension of Laplace's equa
 
 ## Deriving the heat equation in 1D
 
+### Heat flux 
 Consider the temperature distribution u(x,t) in a thin metal rod of length L. 
 
 <p align="center">
@@ -89,6 +88,14 @@ This equation is a general statement regarding the conservation of thermal energ
 </body>
 </html>
 
+### Fourier's law of heat conduction
+
+Fourier worked on the heat equation (in fact he invented the Fourier transform as a tool to solve the heat equation) and derived Fourier's law of heat conduction.
+Whilst he was analyzing the heat equation, he made the following three observations: 
+    - There is no heat flux when the temperature is constant
+    - Heat energy flows from high temperature to low temperature
+    - There is more heat flux when there is a larger temperature difference
+
 <!DOCTYPE html>
 <html lang="en">
 <body>
@@ -112,9 +119,35 @@ This equation is a general statement regarding the conservation of thermal energ
 </body>
 </html>
 
+### Overall 1D solution
 
+When we combine the information above, we get:
 
-Fourier worked on the heat equation (in fact he invented the Fourier transform as a tool to solve the heat equation) and derived Fourier's law of heat conduction, which we 
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <p>The heat conduction equation is given by:</p>
+    <p>
+        $$c(x) \rho(x) \frac{\partial u}{\partial t} = k \frac{\partial^2 u}{\partial x^2} + Q$$
+    </p>
+    <p>Assuming \( c, \rho, k \) are constant in space, the equation simplifies to:</p>
+    <p>
+        $$\frac{\partial u}{\partial t} = \frac{k}{c \rho} \frac{\partial^2 u}{\partial x^2} + \frac{1}{c \rho} Q$$
+    </p>
+    <p>
+        <small>Where:</small>
+        <ul>
+            <li><code>c(x)</code>: Specific heat</li>
+            <li><code>ρ(x)</code>: Density</li>
+            <li><code>u(x, t)</code>: Temperature</li>
+            <li><code>k</code>: Thermal conductivity</li>
+            <li><code>Q</code>: Heat source</li>
+            <li><code>\(\alpha^2 = \frac{k}{c \rho}\)</code>: Thermal diffusivity</li>
+        </ul>
+    </p>
+</body>
+</html>
+
 
 ## Generalizing the solution technique
 
