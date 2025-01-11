@@ -244,14 +244,14 @@ Instead of using traditional statistical bounds derived from probability inequal
 ### Maximum Principle for Parabolic equations
 
 The heat equation satisfies the maximum principle, which states:
-    - The maximum and minimum values of the solution u(x,t) occur either at the initial time (t=0) or on the boundary (x=0 or x=L)
-    - This implies that if u(x,0)=f(x), the bounds of u(x,t) are determined by the bounds of f(x) and any boundary conditions.
+    <li>The maximum and minimum values of the solution u(x,t) occur either at the initial time (t=0) or on the boundary (x=0 or x=L)</li>
+    <li>This implies that if u(x,0)=f(x), the bounds of u(x,t) are determined by the bounds of f(x) and any boundary conditions.</li>
 
 ### Bounding Using Initial and Boundary Conditions
 
-    - If the initial condition f(x) is known, then u(x,t) is bounded by the maximum and minimum values of f(x).
-    - For Dirichlet boundary conditions (u(0,t)=u(L,t)=0), u(x,t) remains non-negative if f(x)≥0.
-    - For Neumann boundary conditions (∂u/∂x=0 at boundaries), u(x,t) may preserve symmetry or maintain constant total heat.
+    <li>If the initial condition f(x) is known, then u(x,t) is bounded by the maximum and minimum values of f(x).</li>
+    <li>For Dirichlet boundary conditions (u(0,t)=u(L,t)=0), u(x,t) remains non-negative if f(x)≥0.</li>
+    <li>For Neumann boundary conditions (∂u/∂x=0 at boundaries), u(x,t) may preserve symmetry or maintain constant total heat.</li>
 
 ### Energy methods
 
