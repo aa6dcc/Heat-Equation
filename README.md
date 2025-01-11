@@ -26,12 +26,12 @@ Where:
 
 It was first developed by French mathematician and physicist Joseph Fourier in 1822 for modelling how a quantity such as heat diffuses in a given region, but many great minds (such as Joule, Carnot, Kelvin... or even Benjamin Thompson, who measured heat produced during the process of boring a cannon) had worked on the concept of heat diffusion, from the Ancient Greeks to modern scientists. 
 
-The heat equation doesn't fully describe the behaviour of heat, as we also need initial conditions and boundary conditions to fully analyze it. 
+The heat equation doesn't fully describe the behaviour of heat, as we also need initial conditions and Dirichlet boundary conditions to fully analyze it. 
 
 | Summary   |
 |-----------|
 | [Introduction](#Introduction) |
-| [Newton-Raphson estimation method](#Newton-Raphson-estimation-method) |
+| [Estimation methods](#Estimation-methods) |
 | [Finding solution bounds](#Finding-solution-bounds) |
 | [Deriving the heat equation in 1D](#Deriving-the-heat-equation-in-1-D)|
 | [Generalizing the solution technique](#Generalizing-the-solution-technique) |
@@ -42,7 +42,8 @@ The heat equation doesn't fully describe the behaviour of heat, as we also need 
 
 As mentioned above, the heat equation is a partial differential equation which arises in problems of heat conduction.
 
-At steady state (a state in which the system doesn't change through time), the heat equation simplifies down to Laplace's equation, a second order partial differential equation:
+At steady state (a state in which the system doesn't change through time), the heat equation simplifies down to Laplace's equation, a second order partial differential equation.
+This means the solution to Laplace's equation can often serve as the long-term behavior of the heat equation.
 
 <p align="center">
     <img src="https://latex.codecogs.com/svg.latex?\nabla^2u%20=%200" alt="Laplace's Equation">
@@ -54,7 +55,100 @@ Where:
 
 In effect, the heat equation can be thought of as an extension of Laplace's equation to include the effect of time-dependent heat flow. 
 
-## Newton-Raphson estimation method
+## Estimation methods
+
+Before directly solving the heat equation, one could also choose to estimate its solutions.
+There are several estimation methods for this, but these only deal with linear systems. 
+As the heat equation is a linear PDE, we have to restrict the estimation methods to linear ones (ie. not the Newton-Raphson method for example). 
+
+### Fourier series
+
+A Fourier series is an expansion of a periodic function into an infinite sum of trigonometric functions. 
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <p>Heat Equation Solution Using Fourier Series</p>
+    <p>
+        This page explains how to solve the heat equation using the Fourier series method. The following equations illustrate the process.
+    </p>
+
+    <p>The Heat Equation</p>
+    <div class="equation">
+        \[
+        \frac{\partial u(x, t)}{\partial t} = \alpha \frac{\partial^2 u(x, t)}{\partial x^2}
+        \]
+    </div>
+
+    <p>Fourier Series Solution</p>
+    <p>
+        The solution to the heat equation in terms of a Fourier series is:
+    </p>
+    <div class="equation">
+        \[
+        u(x, t) = \sum_{n=1}^\infty b_n \sin\left(\frac{n\pi x}{L}\right) e^{-\frac{n^2\pi^2\alpha t}{L^2}}
+        \]
+    </div>
+
+    <p>Fourier Coefficients</p>
+    <p>
+        The Fourier coefficients \( b_n \) are computed using the initial condition \( u(x, 0) = f(x) \):
+    </p>
+    <div class="equation">
+        \[
+        b_n = \frac{2}{L} \int_0^L f(x) \sin\left(\frac{n\pi x}{L}\right) dx
+        \]
+    </div>
+
+    <p>Boundary and Initial Conditions</p>
+    <p>
+        We assume the following boundary and initial conditions:
+    </p>
+    <div class="equation">
+        \[
+        u(0, t) = u(L, t) = 0 \quad \text{and} \quad u(x, 0) = f(x)
+        \]
+    </div>
+
+    <p>Exponential Decay in Time</p>
+    <p>
+        The time-dependent exponential term in the Fourier series is:
+    </p>
+    <div class="equation">
+        \[
+        e^{-\frac{n^2\pi^2\alpha t}{L^2}}
+        \]
+    </div>
+
+    <p>
+        This shows how each Fourier mode decays over time, with higher modes decaying faster.
+    </p>
+
+    <p>Final Solution</p>
+    <p>
+        Combining everything, the solution is:
+    </p>
+    <div class="equation">
+        \[
+        u(x, t) = \sum_{n=1}^\infty \left( \frac{2}{L} \int_0^L f(x) \sin\left(\frac{n\pi x}{L}\right) dx \right) 
+        \sin\left(\frac{n\pi x}{L}\right) e^{-\frac{n^2\pi^2\alpha t}{L^2}}
+        \]
+    </div>
+
+    <p>
+        This formula gives the temperature distribution \( u(x, t) \) at any position \( x \) and time \( t \).
+    </p>
+</body>
+</html>
+
+
+### Laplace transforms
+
+The Laplace transform is an integral transform that converts a variable in the time domain to a variable in the frequency domain. 
+
+### Green functions
+
+A Green function is the impulse response of linear inhomogeneous PDE differential operators. 
 
 ## Finding solution bounds
 
@@ -200,9 +294,6 @@ An idealized solution to the heat equation would be plugging in a product of a s
     <p>Hence we can see a product of a sine and exponential function is a solution. </p>
 </body>
 </html>
-
-
-### Fourier series
 
 ## Computational methods
 
