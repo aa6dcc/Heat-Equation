@@ -65,23 +65,43 @@ As the heat equation is a linear PDE, we have to restrict the estimation methods
 
 A Fourier series is an expansion of a periodic function into an infinite sum of trigonometric functions. 
 
-```HTML
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Equation with Fourier Series</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .equation {
+            margin: 20px 0;
+            text-align: center;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+    </style>
+</head>
 <body>
-    <p>Heat Equation Solution Using Fourier Series</p>
+    <h1>Heat Equation Solution Using Fourier Series</h1>
     <p>
         This page explains how to solve the heat equation using the Fourier series method. The following equations illustrate the process.
     </p>
 
-    <p>The Heat Equation</p>
+    <h2>The Heat Equation</h2>
     <div class="equation">
         \[
         \frac{\partial u(x, t)}{\partial t} = \alpha \frac{\partial^2 u(x, t)}{\partial x^2}
         \]
     </div>
 
-    <p>Fourier Series Solution</p>
+    <h2>Fourier Series Solution</h2>
     <p>
         The solution to the heat equation in terms of a Fourier series is:
     </p>
@@ -91,7 +111,7 @@ A Fourier series is an expansion of a periodic function into an infinite sum of 
         \]
     </div>
 
-    <p>Fourier Coefficients</p>
+    <h2>Fourier Coefficients</h2>
     <p>
         The Fourier coefficients \( b_n \) are computed using the initial condition \( u(x, 0) = f(x) \):
     </p>
@@ -101,7 +121,7 @@ A Fourier series is an expansion of a periodic function into an infinite sum of 
         \]
     </div>
 
-    <p>Boundary and Initial Conditions</p>
+    <h2>Boundary and Initial Conditions</h2>
     <p>
         We assume the following boundary and initial conditions:
     </p>
@@ -111,7 +131,7 @@ A Fourier series is an expansion of a periodic function into an infinite sum of 
         \]
     </div>
 
-    <p>Exponential Decay in Time</p>
+    <h2>Exponential Decay in Time</h2>
     <p>
         The time-dependent exponential term in the Fourier series is:
     </p>
@@ -125,7 +145,7 @@ A Fourier series is an expansion of a periodic function into an infinite sum of 
         This shows how each Fourier mode decays over time, with higher modes decaying faster.
     </p>
 
-    <p>Final Solution</p>
+    <h2>Final Solution</h2>
     <p>
         Combining everything, the solution is:
     </p>
@@ -141,7 +161,6 @@ A Fourier series is an expansion of a periodic function into an infinite sum of 
     </p>
 </body>
 </html>
-```
 
 
 ### Laplace transforms
