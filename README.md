@@ -89,52 +89,43 @@ This equation is a general statement regarding the conservation of thermal energ
 
 From there, we have:
 
-<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Left cylinder -->
-  <circle cx="100" cy="100" r="30" stroke="white" fill="none" stroke-width="2"/>
-  <!-- Right cylinder -->
-  <circle cx="200" cy="100" r="30" stroke="white" fill="none" stroke-width="2" stroke-dasharray="5,5"/>
-  
-  <!-- Arrow -->
-  <path d="M130 100 L170 100" stroke="white" fill="none" stroke-width="2"/>
-  <path d="M170 100 L160 95 L160 105 Z" fill="white"/>
-  
-  <!-- Text labels -->
-  <text x="70" y="100" fill="white" font-family="Arial" font-size="14">q(x,t)</text>
-  <text x="210" y="100" fill="white" font-family="Arial" font-size="14">q(x+Δx,t)</text>
-</svg>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Flux Diagram</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <h1>Heat Flux Diagram and Equations</h1>
+    <div>
+        <p>
+            Heat flux, denoted as \( q(x, t) \), is the thermal energy transferred per unit time:
+        </p>
+        <p>
+            \[
+            q(x + \Delta x, t) = -k \frac{\partial u}{\partial x}
+            \]
+        </p>
+        <p>
+            The rate of change of heat flux is given by:
+        </p>
+        <p>
+            \[
+            -\frac{\partial q}{\partial x} = \lim_{\Delta x \to 0} \frac{q(x, t) - q(x + \Delta x, t)}{\Delta x}
+            \]
+        </p>
+        <p>
+            Here, \( k \) is the thermal conductivity, \( u \) is the temperature, and \( \Delta x \) is the small spatial increment.
+        </p>
+    </div>
+</body>
+</html>
 
-<div class="equation">
-  <p>q(x,t) = heat flux from left to right (thermal energy/area)</p>
-  
-  <p>
-    <sup>∂q</sup>⁄<sub>∂x</sub> = lim<sub>Δx→0</sub>
-    <span class="fraction">
-      q(x,t) - q(x+Δx,t)
-      <hr>
-      Δx
-    </span>
-  </p>
-
-  <p>q(x,t) = -k<span class="fraction">∂u<hr>∂x</span></p>
-</div>
-
-.equation {
-  font-family: "Times New Roman", serif;
-  font-size: 16px;
-}
-
-.fraction {
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-}
-
-.fraction hr {
-  border: none;
-  border-top: 1px solid black;
-  margin: 2px 0;
-}
 
 Fourier worked on the heat equation (in fact he invented the Fourier transform as a tool to solve the heat equation) and derived Fourier's law of heat conduction, which we 
 
