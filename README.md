@@ -157,23 +157,10 @@ When we combine the information above, we get:
 
 ## Generalizing the solution technique
 
-An idealized solution to the heat equation 
-
-<p align="center">
-    <img src="https://latex.codecogs.com/svg.latex?\frac{\partial%20u}{\partial%20t}%20=%20\alpha%20\frac{\partial^2%20u}{\partial%20x^2}" alt="1D Heat Equation">
-    <br>
-</p>
-
-would be plugging in 
+An idealized solution to the heat equation would be plugging in 
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-</head>
 <body>
     <h1>Solution to the Heat Equation</h1>
     <p>The heat equation in one dimension is:</p>
