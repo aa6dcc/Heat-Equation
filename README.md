@@ -462,25 +462,6 @@ An idealized solution to the heat equation would be plugging in a product of a s
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generalizing the Solution Technique</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        .math {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #f4f4f4;
-            padding: 5px;
-            border-radius: 5px;
-            display: inline-block;
-        }
-    </style>
-</head>
 <body>
     <h4>Generalizing the Solution Technique</h4>
     <p>
