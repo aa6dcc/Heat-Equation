@@ -500,6 +500,65 @@ An idealized solution to the heat equation would be plugging in a product of a s
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h4>General Solution to the Heat Equation</h4>
+
+    <p>The general solution to the one-dimensional heat equation:</p>
+    <div class="equation">
+        u<sub>t</sub> = α u<sub>xx</sub>
+    </div>
+    <p>with zero boundary conditions and initial condition <code>u(x, 0) = f(x)</code> is given by:</p>
+    <div class="equation">
+        u(x, t) = ∑<sub>n=1</sub><sup>∞</sup> b<sub>n</sub> e<sub>n</sub>(x) e<sup>−λ<sub>n</sub>t</sup>
+    </div>
+    <p>where:</p>
+    <ul>
+        <li><b>Eigenfunctions:</b> e<sub>n</sub>(x) = √(2/L) sin(nπx/L)</li>
+        <li><b>Eigenvalues:</b> λ<sub>n</sub> = α (nπ/L)<sup>2</sup></li>
+        <li><b>Fourier Coefficients:</b> b<sub>n</sub> = ∫<sub>0</sub><sup>L</sup> f(x) e<sub>n</sub>(x) dx</li>
+    </ul>
+
+    <h5>Steps to Derive the General Solution</h5>
+    <ol>
+        <li><b>Eigenfunction Expansion:</b> Represent <code>u(x, t)</code> as a sum of eigenfunctions:
+            <div class="equation">
+                u(x, t) = ∑<sub>n=1</sub><sup>∞</sup> c<sub>n</sub>(t) e<sub>n</sub>(x)
+            </div>
+        </li>
+        <li><b>Substitute into the Heat Equation:</b> Substitute this expansion into <code>u<sub>t</sub> = α u<sub>xx</sub></code>:
+            <div class="equation">
+                ∑<sub>n=1</sub><sup>∞</sup> c<sub>n</sub>'(t) e<sub>n</sub>(x) = α ∑<sub>n=1</sub><sup>∞</sup> c<sub>n</sub>(t) λ<sub>n</sub> e<sub>n</sub>(x)
+            </div>
+        </li>
+        <li><b>Orthogonality of Eigenfunctions:</b> Use the orthogonality property of <code>e<sub>n</sub>(x)</code> to isolate equations for each mode.</li>
+        <li><b>Solve for Time Coefficients:</b> The solution for <code>c<sub>n</sub>(t)</code> is:
+            <div class="equation">
+                c<sub>n</sub>(t) = c<sub>n</sub>(0) e<sup>−αλ<sub>n</sub>t</sup>
+            </div>
+        </li>
+        <li><b>Determine Initial Coefficients:</b> Use the initial condition <code>u(x, 0) = f(x)</code> to find:
+            <div class="equation">
+                b<sub>n</sub> = ∫<sub>0</sub><sup>L</sup> f(x) e<sub>n</sub>(x) dx
+            </div>
+        </li>
+        <li><b>Combine Results:</b> Substitute the coefficients into the solution:
+            <div class="equation">
+                u(x, t) = ∑<sub>n=1</sub><sup>∞</sup> b<sub>n</sub> e<sub>n</sub>(x) e<sup>−αλ<sub>n</sub>t</sup>
+            </div>
+        </li>
+    </ol>
+
+    <h5>Key Properties of the Solution</h5>
+    <ul>
+        <li><b>Decay of Modes:</b> Higher modes decay faster due to the exponential term <code>e<sup>−λ<sub>n</sub>t</sup></code>.</li>
+        <li><b>Orthogonality:</b> The eigenfunctions form an orthonormal basis, ensuring convergence of the solution.</li>
+        <li><b>Spectral Representation:</b> The solution decomposes the initial condition into modes of the operator <code>u<sub>xx</sub></code>.</li>
+    </ul>
+</body>
+</html>
+
 
 ## Computational methods
 
