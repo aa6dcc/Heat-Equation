@@ -558,8 +558,21 @@ An idealized solution to the heat equation would be plugging in a product of a s
 </body>
 </html>
 
-
 ## Computational methods
+
+Computational methods are essential for solving the heat equation, especially when analytical solutions are unavailable due to complex geometries, non-linearities, or boundary conditions. These methods discretize the equation into manageable components for numerical approximation.
+
+Tool to verify if a given function is a solution to the heat equation using Sympy: [https://github.com/aa6dcc/Heat-Equation/blob/main/verify_solution_heat_equation.py](#Code)
+
+### Finite Difference Methods
+
+#### Explicit Method
+
+#### Implicit Method
+
+#### Crank-Nicolson Method
+
+### Monte Carlo methods
 
 ## Optimization
 
