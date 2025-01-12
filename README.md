@@ -566,6 +566,8 @@ Tool to verify if a given function is a solution to the heat equation using Symp
 
 Python scripts running the different computational methods: [Relevant folder](https://github.com/aa6dcc/Heat-Equation/tree/main/computation-methods)
 
+SciPy ODE solver: [Function](https://github.com/aa6dcc/Heat-Equation/blob/main/SciPy_numerical_solver.py)
+
 ### Finite Difference Methods
 
 Finite methods are numerical techniques used to approximate the solutions of differential equations. They involve breaking down a continuous domain (such as a region in space or time) into a discrete set of points, enabling the equations to be solved computationally. 
@@ -658,4 +660,99 @@ Here, the Monte Carlo method for solving the heat equation simulates the diffusi
 
 ## Optimization
 
+There are many ways to approach the optimization section. In general, this section relates to how we could enhance the efficiency, accuracy and scalability of the methods used above.
+Optimization in the context of the heat equation focuses on improving system performance or achieving specific objectives, such as minimizing energy usage or designing temperature profiles. By incorporating constraints like boundary conditions, energy conservation, or material properties, optimization techniques provide practical solutions for controlling heat flow, solving inverse problems, and enhancing thermal management in various applications. 
+
+### Numerical stability and convergence
+
+We want to make sure  r=αΔt/(Δx)^2 ≤0.5.
+This ensures that the numerical solution converges to the correct result without instability by preventing numerical divergence. 
+
+### Computational efficiency
+
+Another approach would be to use more efficient code, more powerful Python libraries (software), or possibly making for larger calculations, notably for the Monte Carlo simulations, using multi-core CPUs or GPUs (hardware). We could also focus more on certain aspects of the heat equation to concentrate the computational power of the computer on something more precise yet more detailed. 
+
+### Energy and error analysis
+
+This reduces errors and improves accuracy, as it monitors the energy decay of the system to verify physical correctness.
+By analyzing the discretization error (O(Δx^2,Δt^2)) and adjusting parameters accordingly, we can use extrapolation techniques to reduce numerical errors.
+This ensures solutions are both physically meaningful and numerically accurate.
+
+### Lagrange multipliers
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h4>Lagrange Multipliers in the Heat Equation</h4>
+    <h5>1. Constrained Optimization Problems</h5>
+    <p>
+        Lagrange multipliers are useful for solving the heat equation while ensuring certain constraints are satisfied. For example:
+    </p>
+    <ul>
+        <li><strong>Energy Conservation:</strong> Enforce that the total energy (e.g., the integral of the temperature over the domain) remains constant.</li>
+        <li><strong>Boundary Constraints:</strong> Impose specific temperature values or heat fluxes at the boundaries beyond standard Dirichlet or Neumann conditions.</li>
+    </ul>
+    <p>
+        The optimization problem is often written as:
+        <em>minimize</em> \( J(u) \) <em>subject to</em> \( g(u) = 0 \),
+        where:
+    </p>
+    <ul>
+        <li>\( J(u) \): The cost or objective function (e.g., the integral of temperature differences over time).</li>
+        <li>\( g(u) \): A constraint function (e.g., energy conservation or fixed boundary flux).</li>
+    </ul>
+    <p>
+        Using Lagrange multipliers, the problem is reformulated as:
+        \[ \mathcal{L}(u, \lambda) = J(u) + \lambda g(u), \]
+        where \( \lambda \) is the Lagrange multiplier. The solution satisfies:
+        \[ \frac{\partial \mathcal{L}}{\partial u} = 0 \quad \text{and} \quad \frac{\partial \mathcal{L}}{\partial \lambda} = 0. \]
+    </p>
+    <h5>2. Inverse Problems</h5>
+    <p>
+        Lagrange multipliers can help determine unknown parameters (e.g., thermal diffusivity \( \alpha \)) or initial conditions that lead to a desired temperature distribution. For example:
+    </p>
+    <p>
+        The constraint ensures that the solution satisfies the heat equation:
+        \[
+        \mathcal{L}(u, \lambda) = \int (u_t - \alpha u_{xx})^2 dx + \int \lambda (u_t - \alpha u_{xx}) dx.
+        \]
+        Minimizing \( \mathcal{L} \) ensures that \( u \) satisfies the heat equation while fitting observed data.
+    </p>
+    <h5>3. Optimization of Control Inputs</h5>
+    <p>
+        In practical applications, you might control heat sources to achieve a specific temperature profile. For example:
+    </p>
+    <p>
+        Minimize the energy used to maintain a target temperature distribution:
+        \[
+        \min J(u, q) = \int (u(x, t) - u_{\text{target}}(x, t))^2 dx + \int q(x, t)^2 dx,
+        \]
+        subject to:
+        \[
+        u_t = \alpha u_{xx} + q(x, t).
+        \]
+        Here, \( q(x, t) \) represents the heat input, and \( u_{\text{target}} \) is the desired temperature profile. Lagrange multipliers ensure the solution respects the heat equation dynamics.
+    </p>
+    <h5>Applications of Lagrange Multipliers</h5>
+    <ul>
+        <li><strong>Thermal Management:</strong> Design heat source placement or control inputs for devices.</li>
+        <li><strong>Material Optimization:</strong> Adjust properties like thermal conductivity or diffusivity to achieve desired temperature behavior.</li>
+        <li><strong>Boundary Condition Design:</strong> Solve for boundary fluxes or interface conditions to meet operational requirements.</li>
+    </ul>
+    <h5>Advantages of Using Lagrange Multipliers</h5>
+    <ul>
+        <li>Provide a systematic way to handle constraints during optimization.</li>
+        <li>Help incorporate physical laws, such as conservation of energy, directly into the problem formulation.</li>
+        <li>Enable solving inverse or control problems in thermal systems.</li>
+    </ul>
+    <p>
+        By combining Lagrange multipliers with computational methods (e.g., finite difference or finite element), you can address complex, constrained problems in heat transfer efficiently.
+    </p>
+</body>
+</html>
+
+Here are examples of basic Python code using Lagrange multipliers: [Examples](https://github.com/aa6dcc/Heat-Equation/tree/main) 
+
+This project examined the heat equation, different ways of approaching it, solving it, estimating it and visualizing it.
+Its purpose is also to give the reader a better understanding of the topic - I hope it was successful in this regard!
 
