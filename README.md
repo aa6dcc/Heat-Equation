@@ -3,6 +3,8 @@
 The heat equation is a partial differential equation.
 It tells us that the rate at which the temperature changes at a given point over time depends on the second derivative of that temperature at that point with respect to space. 
 
+Aside from analysing heat diffusion, it has a variety of applications, such as particle diffusion, Brownian motion, image analysis, Riemannian analysis along with financial mathematics (for the modelling of options - Black-Scholes can be seen as a variant of the heat equation).
+
 It is most commonly seen under its standard form in one dimension:
 
 <p align="center">
