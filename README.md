@@ -685,40 +685,30 @@ This ensures solutions are both physically meaningful and numerically accurate.
 <body>
     <h4>Lagrange Multipliers in the Heat Equation</h4>
     <h5>1. Constrained Optimization Problems</h5>
-    <p>
-        Lagrange multipliers are useful for solving the heat equation while ensuring certain constraints are satisfied. For example:
-    </p>
+    <p>Lagrange multipliers are useful for solving the heat equation while ensuring certain constraints are satisfied. For example:</p>
     <ul>
         <li><strong>Energy Conservation:</strong> Enforce that the total energy (e.g., the integral of the temperature over the domain) remains constant.</li>
         <li><strong>Boundary Constraints:</strong> Impose specific temperature values or heat fluxes at the boundaries beyond standard Dirichlet or Neumann conditions.</li>
     </ul>
-    <p>
-        The optimization problem is often written as:
-        <em>minimize</em>\(J(u)\)<em>subject to</em>\(g(u) = 0\),
-        where:
-    </p>
+    <p>The optimization problem is often written as: <em>minimize</em> \( J(u) \) <em>subject to</em> \( g(u) = 0 \), where:</p>
     <ul>
-        <li>\(J(u)\): The cost or objective function (e.g., the integral of temperature differences over time).</li>
-        <li>\(g(u)\): A constraint function (e.g., energy conservation or fixed boundary flux).</li>
+        <li>\( J(u) \): The cost or objective function (e.g., the integral of temperature differences over time).</li>
+        <li>\( g(u) \): A constraint function (e.g., energy conservation or fixed boundary flux).</li>
     </ul>
-    <p> Using Lagrange multipliers, the problem is reformulated as:
+    <p>Using Lagrange multipliers, the problem is reformulated as: 
         \[\mathcal{L}(u,\lambda) = J(u) + \lambda g(u),\]
         where \(\lambda\) is the Lagrange multiplier. The solution satisfies:
-        \[\frac{\partial \mathcal{L}}{\partial u} = 0 \quad \text{and} \quad \frac{\partial \mathcal{L}}{\partial \lambda} = 0. \]</p>
+        \[\frac{\partial \mathcal{L}}{\partial u} = 0 \quad \text{and} \quad \frac{\partial \mathcal{L}}{\partial \lambda} = 0.\]</p>
     <h5>2. Inverse Problems</h5>
-    <p>
-        Lagrange multipliers can help determine unknown parameters (e.g., thermal diffusivity \( \alpha \)) or initial conditions that lead to a desired temperature distribution. For example:
-    </p>
-    <p> The constraint ensures that the solution satisfies the heat equation:
+    <p>Lagrange multipliers can help determine unknown parameters (e.g., thermal diffusivity \( \alpha \)) or initial conditions that lead to a desired temperature distribution. For example:</p>
+    <p>The constraint ensures that the solution satisfies the heat equation:
         \[
         \mathcal{L}(u, \lambda) = \int (u_t - \alpha u_{xx})^2 dx + \int \lambda (u_t - \alpha u_{xx}) dx.
         \]
         Minimizing \( \mathcal{L} \) ensures that \( u \) satisfies the heat equation while fitting observed data.</p>
     <h5>3. Optimization of Control Inputs</h5>
-    <p>
-        In practical applications, you might control heat sources to achieve a specific temperature profile. For example:
-    </p>
-    <p> Minimize the energy used to maintain a target temperature distribution:
+    <p>In practical applications, you might control heat sources to achieve a specific temperature profile. For example:</p>
+    <p>Minimize the energy used to maintain a target temperature distribution:
         \[
         \min J(u, q) = \int (u(x, t) - u_{\text{target}}(x, t))^2 dx + \int q(x, t)^2 dx,
         \]
@@ -739,9 +729,7 @@ This ensures solutions are both physically meaningful and numerically accurate.
         <li>Help incorporate physical laws, such as conservation of energy, directly into the problem formulation.</li>
         <li>Enable solving inverse or control problems in thermal systems.</li>
     </ul>
-    <p>
-        By combining Lagrange multipliers with computational methods (e.g., finite difference or finite element), you can address complex, constrained problems in heat transfer efficiently.
-    </p>
+    <p>By combining Lagrange multipliers with computational methods (e.g., finite difference or finite element), you can address complex, constrained problems in heat transfer efficiently.</p>
 </body>
 </html>
 
