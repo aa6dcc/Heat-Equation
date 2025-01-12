@@ -694,36 +694,31 @@ This ensures solutions are both physically meaningful and numerically accurate.
     </ul>
     <p>
         The optimization problem is often written as:
-        <em>minimize</em> \( J(u) \) <em>subject to</em> \( g(u) = 0 \),
+        <em>minimize</em>\(J(u)\)<em>subject to</em>\(g(u) = 0\),
         where:
     </p>
     <ul>
-        <li>\( J(u) \): The cost or objective function (e.g., the integral of temperature differences over time).</li>
-        <li>\( g(u) \): A constraint function (e.g., energy conservation or fixed boundary flux).</li>
+        <li>\(J(u)\): The cost or objective function (e.g., the integral of temperature differences over time).</li>
+        <li>\(g(u)\): A constraint function (e.g., energy conservation or fixed boundary flux).</li>
     </ul>
-    <p>
-        Using Lagrange multipliers, the problem is reformulated as:
-        \[ \mathcal{L}(u, \lambda) = J(u) + \lambda g(u), \]
-        where \( \lambda \) is the Lagrange multiplier. The solution satisfies:
-        \[ \frac{\partial \mathcal{L}}{\partial u} = 0 \quad \text{and} \quad \frac{\partial \mathcal{L}}{\partial \lambda} = 0. \]
-    </p>
+    <p> Using Lagrange multipliers, the problem is reformulated as:
+        \[\mathcal{L}(u,\lambda) = J(u) + \lambda g(u),\]
+        where \(\lambda\) is the Lagrange multiplier. The solution satisfies:
+        \[\frac{\partial \mathcal{L}}{\partial u} = 0 \quad \text{and} \quad \frac{\partial \mathcal{L}}{\partial \lambda} = 0. \]</p>
     <h5>2. Inverse Problems</h5>
     <p>
         Lagrange multipliers can help determine unknown parameters (e.g., thermal diffusivity \( \alpha \)) or initial conditions that lead to a desired temperature distribution. For example:
     </p>
-    <p>
-        The constraint ensures that the solution satisfies the heat equation:
+    <p> The constraint ensures that the solution satisfies the heat equation:
         \[
         \mathcal{L}(u, \lambda) = \int (u_t - \alpha u_{xx})^2 dx + \int \lambda (u_t - \alpha u_{xx}) dx.
         \]
-        Minimizing \( \mathcal{L} \) ensures that \( u \) satisfies the heat equation while fitting observed data.
-    </p>
+        Minimizing \( \mathcal{L} \) ensures that \( u \) satisfies the heat equation while fitting observed data.</p>
     <h5>3. Optimization of Control Inputs</h5>
     <p>
         In practical applications, you might control heat sources to achieve a specific temperature profile. For example:
     </p>
-    <p>
-        Minimize the energy used to maintain a target temperature distribution:
+    <p> Minimize the energy used to maintain a target temperature distribution:
         \[
         \min J(u, q) = \int (u(x, t) - u_{\text{target}}(x, t))^2 dx + \int q(x, t)^2 dx,
         \]
@@ -731,8 +726,7 @@ This ensures solutions are both physically meaningful and numerically accurate.
         \[
         u_t = \alpha u_{xx} + q(x, t).
         \]
-        Here, \( q(x, t) \) represents the heat input, and \( u_{\text{target}} \) is the desired temperature profile. Lagrange multipliers ensure the solution respects the heat equation dynamics.
-    </p>
+        Here, \( q(x, t) \) represents the heat input, and \( u_{\text{target}} \) is the desired temperature profile. Lagrange multipliers ensure the solution respects the heat equation dynamics.</p>
     <h5>Applications of Lagrange Multipliers</h5>
     <ul>
         <li><strong>Thermal Management:</strong> Design heat source placement or control inputs for devices.</li>
