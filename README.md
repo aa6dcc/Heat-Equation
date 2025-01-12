@@ -504,7 +504,6 @@ An idealized solution to the heat equation would be plugging in a product of a s
 <html lang="en">
 <body>
     <h4>General Solution to the Heat Equation</h4>
-
     <p>The general solution to the one-dimensional heat equation:</p>
     <div class="equation">
         u<sub>t</sub> = α u<sub>xx</sub>
@@ -519,7 +518,6 @@ An idealized solution to the heat equation would be plugging in a product of a s
         <li><b>Eigenvalues:</b> λ<sub>n</sub> = α (nπ/L)<sup>2</sup></li>
         <li><b>Fourier Coefficients:</b> b<sub>n</sub> = ∫<sub>0</sub><sup>L</sup> f(x) e<sub>n</sub>(x) dx</li>
     </ul>
-
     <h5>Steps to Derive the General Solution</h5>
     <ol>
         <li><b>Eigenfunction Expansion:</b> Represent <code>u(x, t)</code> as a sum of eigenfunctions:
@@ -549,7 +547,6 @@ An idealized solution to the heat equation would be plugging in a product of a s
             </div>
         </li>
     </ol>
-
     <h5>Key Properties of the Solution</h5>
     <ul>
         <li><b>Decay of Modes:</b> Higher modes decay faster due to the exponential term <code>e<sup>−λ<sub>n</sub>t</sup></code>.</li>
