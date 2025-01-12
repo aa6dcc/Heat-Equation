@@ -564,15 +564,97 @@ Computational methods are essential for solving the heat equation, especially wh
 
 Tool to verify if a given function is a solution to the heat equation using Sympy: [Code](https://github.com/aa6dcc/Heat-Equation/blob/main/verify_solution_heat_equation.py)
 
+Python scripts running the different computational methods: [Relevant folder](https://github.com/aa6dcc/Heat-Equation/tree/main/computation-methods)
+
 ### Finite Difference Methods
+
+Finite methods are numerical techniques used to approximate the solutions of differential equations. They involve breaking down a continuous domain (such as a region in space or time) into a discrete set of points, enabling the equations to be solved computationally. 
+
+![image](https://github.com/user-attachments/assets/5dfb589c-ac57-4f73-b52f-d2779c9ece68)
 
 #### Explicit Method
 
+The Explicit Method is a straightforward approach that uses a forward time difference and a central spatial difference to approximate the heat equation. It is computationally simple and easy to implement, making it suitable for small problems. However, it is conditionally stable, meaning that the time step size must satisfy a specific stability criterion (e.g., r=αΔt/(Δx)^2 ≤0.5). Larger time steps can result in instability and inaccuracies, limiting its applicability for complex or long-duration simulations.
+
 #### Implicit Method
+
+The Implicit Method employs a backward time difference and a central spatial difference, making it unconditionally stable. This method is suitable for stiff problems and longer simulations, as stability is guaranteed regardless of the time step size. However, it requires solving a linear system of equations at every time step, which increases computational complexity and runtime compared to the explicit method. It is ideal for scenarios where stability is a higher priority than computational simplicity.
 
 #### Crank-Nicolson Method
 
+The Crank-Nicolson Method combines features of both explicit and implicit methods by averaging the spatial derivative at the current and next time steps. This results in a method that is second-order accurate in both space and time, offering improved precision for smaller time steps. It is both stable and accurate, making it an excellent choice for practical applications. Like the implicit method, it requires solving a system of equations at each step, which can be computationally demanding. However, its balance of stability and accuracy often makes it the preferred method for solving the heat equation in real-world scenarios.
+
+### Runge-Kutta method
+
+This method reduces the PDE to a system of ordinary differential equations (ODEs), which can then be solved. The Runge-Kutta method approximates solutions for differential equations by rewriting the higher order equation into a system of first order equations.
+
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h4>Explanation of Runge-Kutta Method for the Heat Equation</h4>
+    <h5>Discretization</h5>
+    <p>
+        Spatial derivatives 
+        <math>
+            <msup>
+                <mfrac>
+                    <mrow>&#x2202;u</mrow>
+                    <mrow>&#x2202;x</mrow>
+                </mfrac>
+                <mn>2</mn>
+            </msup>
+        </math>
+        are approximated using a second-order central difference method.<br>
+        The partial differential equation (PDE) becomes a system of ordinary differential equations (ODEs) with respect to time.
+    </p>
+    <h5>Runge-Kutta (RK2)</h5>
+    <p>The RK2 method steps are as follows:</p>
+    <ul>
+        <li>
+            <math>
+                <msub>k<mn>1</mn></msub>
+                = &#x2206;t &sdot; f(&#x1D45D;<sub>n</sub>)
+            </math>, 
+            where 
+            <math>
+                f(&#x1D45D;) = &#x1D6FC; 
+                <mfrac>
+                    <msup>&#x2202;u<mn>2</mn></msup>
+                    <msup>&#x2202;x</msup>
+                </mfrac>
+            </math>.
+        </li>
+        <li>
+            <math>
+                <msub>k<mn>2</mn></msub>
+                = &#x2206;t &sdot; f(&#x1D45D;<sub>n</sub> + 0.5 &sdot; k<sub>1</sub>)
+            </math>
+        </li>
+        <li>
+            <math>
+                &#x1D45D;<sub>n+1</sub> = &#x1D45D;<sub>n</sub> + k<sub>2</sub>
+            </math>
+        </li>
+    </ul>
+    <h5>Summary</h5>
+    <p>
+        In this approach, the heat equation is discretized spatially to reduce it to a system of ODEs. The Runge-Kutta method 
+        (RK2) is then applied to advance the solution in time, providing a stable and accurate method for solving the heat equation.
+    </p>
+</body>
+</html>
+
+![image](https://github.com/user-attachments/assets/60ec96e9-0d29-4a82-8dc0-c02b28e2805f)
+
 ### Monte Carlo methods
+
+Monte Carlo simulation is a mathematical technique that uses random sampling to predict the range of possible outcomes for an uncertain event. 
+
+Here, the Monte Carlo method for solving the heat equation simulates the diffusion of heat by modeling the random movement of particles in a domain. Each particle represents a unit of heat energy, and its random walk approximates the diffusion process described by the heat equation. Particles are allowed to jump to neighboring spatial positions with a probability determined by the thermal diffusivity α, the time step Δt, and the spatial step Δx, ensuring that the simulation satisfies stability conditions. The concentration of particles at each spatial point over time represents the temperature distribution. By averaging the positions and movements of a large number of particles, the Monte Carlo method provides an approximation of the solution to the heat equation. 
+
+![image](https://github.com/user-attachments/assets/72eb9c45-04b4-499d-babf-d80e96c9454a)
+
+![image](https://github.com/user-attachments/assets/3390a8cd-db1b-4e63-8997-52d9b92dd21a)
 
 ## Optimization
 
