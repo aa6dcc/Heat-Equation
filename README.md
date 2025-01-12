@@ -460,6 +460,66 @@ An idealized solution to the heat equation would be plugging in a product of a s
 </body>
 </html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generalizing the Solution Technique</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        .math {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h4>Generalizing the Solution Technique</h4>
+    <p>
+        The solution technique used above can be extended to many other types of equations. 
+        The idea is that the operator <span class="math">u<sub>xx</sub></span> with the zero boundary conditions 
+        can be represented in terms of its eigenfunctions. This leads naturally to one of the basic ideas of the spectral theory 
+        of linear self-adjoint operators.
+    </p>
+    <p>
+        Consider the linear operator <span class="math">Δu = u<sub>xx</sub></span>. The infinite sequence of functions:
+    </p>
+    <p class="math">
+        e<sub>n</sub>(x) = √(2/L) sin(nπx / L), &nbsp; for &nbsp; n ≥ 1
+    </p>
+    <p>
+        are eigenfunctions of <span class="math">Δ</span>. Indeed:
+    </p>
+    <p class="math">
+        Δe<sub>n</sub> = −(n²π² / L²)e<sub>n</sub>.
+    </p>
+    <p>
+        Moreover, any eigenfunction <span class="math">f</span> of <span class="math">Δ</span> with the boundary conditions 
+        <span class="math">f(0) = f(L) = 0</span> is of the form <span class="math">e<sub>n</sub></span> for some <span class="math">n ≥ 1</span>. 
+        The functions <span class="math">e<sub>n</sub></span> for <span class="math">n ≥ 1</span> form an orthonormal sequence 
+        with respect to a certain inner product on the space of real-valued functions on <span class="math">[0, L]</span>. 
+        This means:
+    </p>
+    <p class="math">
+        ⟨e<sub>n</sub>, e<sub>m</sub>⟩ = ∫<sub>0</sub><sup>L</sup> e<sub>n</sub>(x)e<sub>m</sub>* (x) dx = δ<sub>mn</sub>
+    </p>
+    <p>
+        Finally, the sequence {e<sub>n</sub>}<sub>n ∈ N</sub> spans a dense linear subspace of 
+        <span class="math">L²((0, L))</span>. This shows that in effect we have diagonalized the operator 
+        <span class="math">Δ</span>.
+    </p>
+</body>
+</html>
+
+
 ## Computational methods
 
 ## Optimization
