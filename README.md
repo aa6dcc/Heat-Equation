@@ -39,6 +39,7 @@ The heat equation doesn't fully describe the behaviour of heat, as we also need 
 | [Generalizing the solution technique](#Generalizing-the-solution-technique) |
 | [Computational methods](#Computational-methods) |
 | [Optimization](#Optimization) |
+| [Bibliography](#Bibliography) |
 
 ## Introduction
 
@@ -746,3 +747,10 @@ Here are examples of basic Python code using Lagrange multipliers: [Examples](ht
 This project examined the heat equation, different ways of approaching it, solving it, estimating it and visualizing it.
 Its purpose is also to give the reader a better understanding of the topic - I hope it was successful in this regard!
 
+## Bibliography
+
+***Heat equation*** [Wikipedia]: [https://en.wikipedia.org/wiki/Heat_equation](https://en.wikipedia.org/wiki/Heat_equation)
+***Deriving the heat equation: A Parabolic Partial Differential Equation for Heat Energy Conservation*** by Steve Brunton [Youtube]: [https://www.youtube.com/watch?v=9d8PwnKVA-U&ab_channel=SteveBrunton](https://www.youtube.com/watch?v=9d8PwnKVA-U&ab_channel=SteveBrunton)
+***Solving the heat equation*** by 3Blue1Brown [Youtube]: [https://www.youtube.com/watch?v=ToIXSwZ1pJU&ab_channel=3Blue1Brown](https://www.youtube.com/watch?v=ToIXSwZ1pJU&ab_channel=3Blue1Brown)
+***Green's function for the heat equation*** [Mathematics Stack Exchange]: [https://math.stackexchange.com/questions/2588931/green-s-function-for-the-heat-equation](https://math.stackexchange.com/questions/2588931/green-s-function-for-the-heat-equation)
+***The tangled history of the second law of thermodynamics*** [Stephen Wolfram]: [https://writings.stephenwolfram.com/2023/01/how-did-we-get-here-the-tangled-history-of-the-second-law-of-thermodynamics/](https://writings.stephenwolfram.com/2023/01/how-did-we-get-here-the-tangled-history-of-the-second-law-of-thermodynamics/)
